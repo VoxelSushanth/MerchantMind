@@ -2,7 +2,7 @@
 
 A production-ready AI-powered analytics platform for Razorpay merchants. Ask natural language questions about your payment data and get accurate, cited answers backed by real transaction data.
 
-## 🚀 Features
+## Features
 
 - **OAuth Integration**: Securely connect your Razorpay account
 - **Natural Language Queries**: Ask questions like "Which payment method had the highest failure rate last month?"
@@ -12,7 +12,7 @@ A production-ready AI-powered analytics platform for Razorpay merchants. Ask nat
 - **Auto-Generated Insights**: Weekly narrative reports with anomaly detection
 - **Conversation History**: Persistent chat history with context awareness
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────┐     ┌──────────────┐     ┌─────────────┐
@@ -72,7 +72,7 @@ User Question
     └─────────────┘
 ```
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Backend
 - **Python 3.12** with **FastAPI**
@@ -94,7 +94,7 @@ User Question
 - **Redis** for caching and message queue
 - **Docker** + **Docker Compose** for containerization
 
-## 📦 Installation
+## Installation
 
 ### Prerequisites
 
@@ -184,7 +184,7 @@ npm run dev
 # Access at http://localhost:3000
 ```
 
-## 🔑 Configuration
+## Configuration
 
 ### Environment Variables
 
@@ -237,7 +237,7 @@ from cryptography.fernet import Fernet
 print(Fernet.generate_key().decode())
 ```
 
-## 📚 API Documentation
+## API Documentation
 
 ### Authentication Endpoints
 
@@ -399,7 +399,7 @@ Get auto-generated weekly insights (cron-triggered).
 }
 ```
 
-## 🗄️ Database Schema
+## Database Schema
 
 ### Core Tables
 
@@ -462,7 +462,7 @@ CREATE TABLE conversations (
 CREATE INDEX ON embeddings USING ivfflat (embedding vector_cosine_ops);
 ```
 
-## 🔄 Data Ingestion Pipeline
+## Data Ingestion Pipeline
 
 The Celery-based pipeline synchronizes data from Razorpay:
 
@@ -502,7 +502,7 @@ def sync_merchant_data(merchant_id, days=90):
     merchant.last_synced_at = now
 ```
 
-## 🧠 Query Engine Details
+## Query Engine Details
 
 ### Two-Path Approach
 
@@ -555,7 +555,7 @@ Rules:
 Answer:
 ```
 
-## 🔒 Security Features
+## Security Features
 
 - **Encrypted Tokens**: All OAuth tokens encrypted with Fernet at rest
 - **SQL Injection Prevention**: Read-only queries, parameterized statements
@@ -565,7 +565,7 @@ Answer:
 - **Prompt Injection Guards**: Input sanitization and validation
 - **Audit Logging**: All LLM calls logged with latency and cost
 
-## 📊 Monitoring & Observability
+## Monitoring & Observability
 
 ### Logged Metrics
 
@@ -594,7 +594,7 @@ Answer:
 }
 ```
 
-## 🧪 Testing
+## Testing
 
 ### Run Tests
 
@@ -618,7 +618,7 @@ docker-compose -f docker-compose.test.yml up
 - Data ingestion: >80%
 - OAuth flow: >95%
 
-## 🚀 Deployment
+## Deployment
 
 ### Production Checklist
 
@@ -643,7 +643,7 @@ docker-compose -f docker-compose.prod.yml build
 docker-compose -f docker-compose.prod.yml up -d --scale celery-worker=3
 ```
 
-## 📈 Performance Optimization
+## Performance Optimization
 
 - **Query Caching**: Redis cache with 1-hour TTL for identical queries
 - **Vector Index**: IVFFlat index for fast similarity search
@@ -652,7 +652,7 @@ docker-compose -f docker-compose.prod.yml up -d --scale celery-worker=3
 - **Async Operations**: Celery for all long-running tasks
 - **Streaming Responses**: SSE for real-time answer delivery
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -668,7 +668,7 @@ docker-compose -f docker-compose.prod.yml up -d --scale celery-worker=3
 - Update documentation for API changes
 - Use conventional commits
 
-## 📄 License
+## License
 
 MIT License - see [LICENSE](LICENSE) for details.
 
