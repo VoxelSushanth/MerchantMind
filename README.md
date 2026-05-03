@@ -672,13 +672,7 @@ docker-compose -f docker-compose.prod.yml up -d --scale celery-worker=3
 
 MIT License - see [LICENSE](LICENSE) for details.
 
-## 🆘 Support
-
-- **Documentation**: https://docs.razorpay-ai-analytics.com
-- **Issues**: https://github.com/your-org/razorpay-ai-analytics/issues
-- **Email**: support@razorpay-ai-analytics.com
-
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Built with [FastAPI](https://fastapi.tiangolo.com/)
 - UI components from [shadcn/ui](https://ui.shadcn.com/)
@@ -687,4 +681,3 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-**Built with ❤️ for Razorpay merchants**
